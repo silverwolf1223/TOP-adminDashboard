@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  height: 100vh;
+  background-color: darkgrey;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  height: 100%;
+  margin: 0px;
+}
+
+.icon {
+  position: relative;
+  top: 5px;
+  filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%);
+}
+
+.container > div{
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 0px;
+}
+
+#Header {
+  grid-column: 2/-1;
+  background-color: teal;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  font-size: 20px;
+  align-items: center;
+  padding: 0px;
+}
+
+#searchLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#searchBar {
+  display: flex;
+}
+
+#searchBar img {
+  top: 0px;
+}
+
+#userOptions {
+  display: flex;
+}
+
+.userTools {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.userTools img {
+  top: 0px;
+}
+
+.userTools ul {
+  display: flex;
+  gap: 20px;
+}
+
+.userTools li {
+  background-color: rgb(48, 145, 255);
+  border-radius: 10px;
+  align-self: center;
+  width: 100px;
+  height: 25px;
+}
+
+p {
+  justify-self: start;
+  font-size: small;
+  height: auto;
+}
+
+.userTools > div {
+  display: flex;
+}
+
+#Sidebar {
+  font-size: 20px;
+  grid-row: 1/-1;
+  background-color:darkolivegreen;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+
+#dashHead {
+  font-size: 40px;
+}
+
+#Sidebar > div {
+  color: white;
+  place-content: center;
+}
+
+#Nav {
+  grid-row: 2/-1;
+  background-color: brown;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 20px;
+}
+
+#Nav div {
+  place-content: center;
+}
+
+#Articles {
+  grid-row: 2/-1;
+  grid-column: 2/-2;
+  background-color: purple;
+  display: grid;
+  grid-auto-flow: row;
+  overflow: auto;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  font-size: medium;
+}
+
+#Articles > div {
+  border: 3px solid black;
+  text-overflow: clip;
+}
+
+.content {
+  padding: 5px;
+  overflow-wrap: break-word;
+}
+
+#Footer {
+  grid-column: 1/-1;
+  background-color: darkgoldenrod;
+  font-size: 18px;
+  place-content: center;
+}
+
