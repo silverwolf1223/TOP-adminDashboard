@@ -13,6 +13,11 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -23,8 +28,15 @@ ul {
 
 .icon {
   position: relative;
-  top: 5px;
   filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%);
+}
+
+.top {
+  top: 5px;
+}
+
+.pfp {
+  border-radius: 50%;
 }
 
 .container > div{
@@ -63,6 +75,7 @@ ul {
 
 #userOptions {
   display: flex;
+  gap: 5px;
 }
 
 .userTools {
@@ -120,12 +133,22 @@ p {
   grid-row: 2/-1;
   background-color: brown;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   font-size: 20px;
 }
 
 #Nav div {
   place-content: center;
+}
+
+#Nav ul {
+  background-color: orange;
+  border-radius: 5px;
+}
+
+#Trending li {
+  display: flex;
+  justify-content: end;
 }
 
 #Articles {
@@ -135,11 +158,12 @@ p {
   display: grid;
   grid-auto-flow: row;
   overflow: auto;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 0.75fr));
+  grid-auto-rows: 0.25fr;
   font-size: medium;
 }
 
-#Articles > div {
+.project {
   border: 3px solid black;
   text-overflow: clip;
 }
@@ -147,6 +171,8 @@ p {
 .content {
   padding: 5px;
   overflow-wrap: break-word;
+  max-height: 150px;
+  overflow: auto;
 }
 
 #Footer {
