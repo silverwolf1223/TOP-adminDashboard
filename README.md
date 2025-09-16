@@ -1,1 +1,1 @@
-# TOP-adminDashboard
+This is a admin dashboard project for The Odin Project meant to display skills in more advanced levels of html and css
